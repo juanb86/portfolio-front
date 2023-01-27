@@ -1,0 +1,18 @@
+/* --------------- */
+/* ---Variables--- */
+/* --------------- */
+:root {
+  --sunglow: #ffc31d;
+  --raisin-black: #252931;
+  --muted-white: #fafafa;
+}
+
+/* -------------- */
+/* ---Globales--- */
+/* -------------- */
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: var(--raisin-black);
+  color: var(--muted-white);
+}
