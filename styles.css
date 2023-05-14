@@ -2,9 +2,11 @@
 /* ---Variables--- */
 /* --------------- */
 :root {
-  --sunglow: #ffc31d;
-  --raisin-black: #252931;
-  --muted-white: #fafafa;
+  --floral-white: #fcf9f2;
+  --chartreuse: #e6fc56;
+  --raisin-black: #1d1c22;
+  --timberwolf: #d1d6ce;
+  --onyx: #3e3e3e;
 }
 
 /* -------------- */
@@ -12,125 +14,144 @@
 /* -------------- */
 
 body {
-  font-family: 'Poppins', sans-serif !important;
-  background-color: var(--raisin-black);
-  color: var(--muted-white);
-}
-
-/* ----------------- */
-/* ---Componentes--- */
-/* ----------------- */
-
-.custom-button {
-  background-color: var(--sunglow);
+  font-family: 'Questrial', sans-serif;
+  background-color: var(--floral-white);
   color: var(--raisin-black);
-  padding: 0.75rem 2rem;
+}
+
+/* --------------- */
+/* ---Generales--- */
+/* --------------- */
+
+.btn-ghost {
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  border-radius: 0;
+  background: transparent;
+  color: var(--raisin-black);
+  box-shadow: 0 0 0 1px var(--raisin-black);
+  transition: all 300ms;
+}
+.btn-ghost:hover {
+  background: var(--raisin-black);
+  color: var(--floral-white);
+  fill: var(--floral-white);
+}
+.btn-ghost:active {
+  background: var(--chartreuse) !important;
+  color: var(--raisin-black) !important;
+  fill: var(--raisin-black) !important;
 }
 
-.custom-button svg {
-  display: inline-block;
-  vertical-align: -0.125em;
-  fill: currentcolor;
-}
-
-.custom-button:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-}
-
-.custom-button:active {
-  filter: brightness(1.2);
-}
-
-/* ----------------- */
-
-.custom-icon-button {
-  font-size: 1.7rem;
+.btn-solid {
   border: none;
-  background: none;
-  color: var(--sunglow);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  border-radius: 0;
+  background: var(--raisin-black);
+  color: var(--floral-white);
+  fill: var(--floral-white);
+  box-shadow: 0 0 0 1px var(--raisin-black);
+  transition: all 300ms;
+}
+.btn-solid:hover {
+  background: var(--onyx);
+  color: var(--chartreuse);
+  fill: var(--chartreuse);
+}
+.btn-solid:active {
+  background: var(--chartreuse) !important;
+  color: var(--raisin-black) !important;
+  fill: var(--raisin-black) !important;
 }
 
-.custom-icon-button:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+.heading-info {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--onyx);
 }
 
-.custom-icon-button:active {
-  filter: brightness(1.2);
+.heading-info > span > svg {
+  fill: var(--timberwolf);
+  font-size: 12px;
 }
 
-/* ----------------- */
-
-.custom-icon-a {
-  font-size: 1.2rem;
-  border: none;
-  background: none;
-  color: var(--sunglow);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+.heading-title {
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.heading-title2 {
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.custom-icon-a:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-
-/* ----------------- */
-
-.custom-navl {
-  color: var(--muted-white);
-  font-weight: bold;
+.green-point {
+  fill: var(--chartreuse) !important;
 }
-
-.custom-navl:hover {
-  color: var(--sunglow);
-  filter: brightness(1.1);
-}
-
-.custom-navl:active {
-  color: var(--sunglow);
+.header-color {
+  background-color: var(--chartreuse);
+  width: fit-content;
+  padding: 0 0.5rem;
 }
 
 /* ------------ */
-/* ---Clases--- */
+/* ---Navbar--- */
 /* ------------ */
 
-.pantalla-principal {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  background-color: var(--raisin-black);
+#navbar-top > ul > li > a {
+  padding: 0px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.55;
+  color: var(--raisin-black);
+  text-transform: uppercase;
+  transition: opacity 300ms;
+}
+#navbar-top > ul > li > a:hover {
+  opacity: 1;
+}
+.navbar-menu {
+  border: none;
+  font-size: 32px;
+  background: none;
+  fill: var(--raisin-black);
+}
+.navbar-menu:hover {
+  fill: var(--onyx);
+}
+.navbar-menu:focus {
+  box-shadow: none;
 }
 
-/* FONDO PRINCIPAL */
+/* ------------ */
+/* ----Hero---- */
+/* ------------ */
 
-.pantalla-principal:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
-  background-color: var(--raisin-black);
-  background-image: url(public/code-programming.jpg);
-  background-size: 100% auto;
-  background-position: center;
-  filter: blur(4px) brightness(0.4);
+#inicio-info {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(public/circulo.png);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: right bottom;
+}
+#inicio-imagen {
+  background-image: url(public/trama.png);
+}
+#inicio-imagen > img {
+  transform: translate(-60px, 80px);
 }
 
-.hero {
-  position: relative;
-  z-index: 1;
-  flex: auto;
+/* ----------------- */
+/* ---Experiencia--- */
+/* ----------------- */
+#experiencia {
+  background-color: var(--timberwolf);
 }
