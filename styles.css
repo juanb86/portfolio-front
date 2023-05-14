@@ -149,13 +149,13 @@ body {
   background-image: url(public/trama.png);
 }
 #inicio-imagen > img {
-  transform: translate(-60px, 80px);
+  transform: translate(-50px, 50px);
 }
 
 /* ----------------- */
-/* ---Experiencia--- */
+/* ---Formacion--- */
 /* ----------------- */
-#experiencia {
+#formacion {
   background-color: var(--timberwolf);
 }
 
@@ -197,3 +197,7 @@ body {
   z-index: 1;
   text-shadow: 0 0 4px black;
 }
+
+/* ----------------- */
+/* ---Experiencia--- */
+/* ----------------- */
